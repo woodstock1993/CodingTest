@@ -74,16 +74,16 @@ void    ten_queen(int row, int col)
     }
     else
     {
-		while (col < 10)
+	while (col < 10)
+	{
+		if (rowCheck(row, col) && diagCheck(row, col))
 		{
-			if (rowCheck(row, col) && diagCheck(row, col))
-			{
-	            arr[row][col] = 1;
-                p_arr[row] = col;
-                ten_queen(row + 1, 0);
-                arr[row][col] = 0;
-                p_arr[row] = 0;
-			}
+			arr[row][col] = 1;
+                	p_arr[row] = col;
+                	ten_queen(row + 1, 0);
+                	arr[row][col] = 0;
+                	p_arr[row] = 0;
+		}
 			col++;
 		}
     }
