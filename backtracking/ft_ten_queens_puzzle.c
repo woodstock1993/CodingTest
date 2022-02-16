@@ -6,7 +6,7 @@
 /*   By: jsuh <jsuh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 09:23:18 by jsuh              #+#    #+#             */
-/*   Updated: 2022/02/16 10:01:25 by jsuh             ###   ########.fr       */
+/*   Updated: 2022/02/16 13:29:39 by jsuh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,16 +74,16 @@ void    ten_queen(int row, int col)
     }
     else
     {
-	while (col < 10)
-	{
-		if (rowCheck(row, col) && diagCheck(row, col))
+		while (col < 10)
 		{
-			arr[row][col] = 1;
-                	p_arr[row] = col;
-                	ten_queen(row + 1, 0);
-                	arr[row][col] = 0;
-                	p_arr[row] = 0;
-		}
+			if (rowCheck(row, col) && diagCheck(row, col))
+			{
+	            arr[row][col] = 1;
+                p_arr[row] = col;
+                ten_queen(row + 1, 0);
+                arr[row][col] = 0;
+                p_arr[row] = 0;
+			}
 			col++;
 		}
     }
@@ -94,10 +94,4 @@ void    ft_ten_queens_puzzle(void)
     ten_queen(0, 0);
     ft_printInt(g_cnt);
     write(1, "\n", 1);
-}
-
-int main(void)
-{
-    ft_ten_queens_puzzle();
-    return (0);
 }
