@@ -1,3 +1,4 @@
-# 알고리즘 문제
+### ps algorithm
 
 - ten_queens_puzzle
+- ft_print_memory
