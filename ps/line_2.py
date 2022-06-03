@@ -2,7 +2,7 @@ import math
 ceil = math.ceil
 
 def solution(n, times):
-    d = [0]*100
+    d = [0]*1000
 
     d[0] = 0
     d[1] = 0
@@ -29,3 +29,5 @@ def solution(n, times):
 
     answer = d[n]
     return answer
+
+print(solution(1000, [1,2,3,4,5,6,7,8,9]))
