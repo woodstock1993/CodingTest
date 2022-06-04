@@ -1,3 +1,8 @@
+"""
+    2748 피보나치 수 2
+"""
+
+
 def fibonacci():
     m = int(input())
 

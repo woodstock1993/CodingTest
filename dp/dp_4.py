@@ -1,3 +1,8 @@
+"""
+    효율적인 화폐구성 8-8
+"""
+
+
 def consist_efficient_money_composition_return_minimal_count():
     a, b = map(int, input().split())
     arr = []
