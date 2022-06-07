@@ -1,7 +1,6 @@
 """
     금광
 """
-
 import numpy as np
 
 
@@ -14,7 +13,7 @@ import numpy as np
 #     mine.append(list(map(int, input().split())))
 
 
-# hv의 요소와 mine 의 요소를 결합시켜
+# 문제에서 준 배열로 편하게 바꿔주는 식
 def convert_arr(hv_, mine_):
     unit = hv_[1]
     new_mine_ = []
