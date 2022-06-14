@@ -84,4 +84,7 @@ def MathChallenge(strParam):
 
 
 # keep this function call here
-print(MathChallenge(input()))
+print(MathChallenge("100 + +"))
+print(MathChallenge("100 - -"))
+print(MathChallenge("100 * *"))
+print(MathChallenge("100 / /"))
