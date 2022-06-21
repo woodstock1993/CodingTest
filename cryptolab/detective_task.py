@@ -4,25 +4,22 @@ arr = []
 for _ in range(n):
     arr.append(input())
 
-
 def count_num(string):
     length = len(string)
     if length == 1:
         return 1
     if length == string.count('?'):
         return length
-    if '?' not in string and length == 2 and '1' in string and '0' in string:
+    if string == '10':
         return 2
-    if '?' not in string and '1' in string and '0' in string and length >2:
-        return 2
+    if string == '01':
+        return 1
+    if string == '00':
+        return 1
+    if length >= 3 and str[0] == '1' and str[-1] == '0' and length - 2 == string.count('?'):
+        return length
 
 
 for i in range(len(arr)):
     print(count_num(arr[i]))
-
-str = '1??????0'
-
-if len(str) >= 3 and str[0] == '1' and str[-1] == 0 and len(str) -2 == str.count('?'):
-    pass
-
 

@@ -1,7 +1,7 @@
 function solution(numbers, K) {
-    if (numbers.length == 1) return 0;
+    if (numbers.length === 1) return 0;
 
-    if (numbers.length == 2) {
+    if (numbers.length === 2) {
         if (Math.abs(number[0]-numbers[1]) <= K) return 0;
         else return -1;
     }
