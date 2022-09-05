@@ -56,7 +56,16 @@ def solve2(n, array):
     return d[n - 1]
 
 
+def solve3(n, arr):
+    dp = [0]*(n+1)
+    dp[1] == arr[0]
+    dp[2] == max(arr[0], arr[1])3
+    for i in range(3, n+1):
+        dp[i] = max(dp[i-1], dp[i-2]+arr[i])
+
+    return dp[n]
+
 import random
 li = [1,2,1,2,1,2,1,2,1,2, 100, 100, 100, 20, 20, 20, 20, 30, 40, 20, 13, 25, 143, 123]
 
-print(solve(len(li), li), solve2(len(li), li))
+print(solve(len(li), li), solve2(len(li), li), solve(len(li), li))

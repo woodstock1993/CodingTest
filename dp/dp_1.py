@@ -43,8 +43,26 @@ def func2(n):
     return d[n]
 
 
-for i in range(1, 51):
-    print(i, end=" ")
-    print(func(i), end=" ")
-    print(func2(i))
-    print('---------------')
+def func3(n):
+    dp = [0]*(n+1)
+    dp[1] = 0
+    dp[2] = 1
+    dp[3] = 1
+    dp[4] = 2
+    dp[5] = 1
+    if 6 <= n:
+        for i in range(6, n+1):
+            arr = []
+            if i%2 == 0:
+                arr.append(dp[i//2])
+            if i%3==0:
+                arr.append(dp[i//3])
+            if i%5==0:
+                arr.append(dp[i//5])
+            arr.append(dp[i-1])
+            dp[i] = min(arr) + 1
+
+    return dp[n]
+
+
+print(func3(26))

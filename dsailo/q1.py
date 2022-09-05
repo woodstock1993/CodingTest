@@ -14,7 +14,7 @@ def solution(strs, t):
                 delta = len(current_unit) - len(unit)
 
                 if delta == 0:
-                    dp[i] = 1;
+                    dp[i] = 1
                 else:
                     dp[i] = min(dp[i], dp[delta - 1] + 1)
 
